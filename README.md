@@ -1,4 +1,4 @@
-# { name } resume
+# kojireock5260's resume
 
 ## Sample
 
