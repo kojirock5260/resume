@@ -2,13 +2,13 @@
 
 ## 基本情報
 
-| key  | value                                 |
-|------|---------------------------------------|
-| 氏名   | 藤田 雄大（Fujita Yudai)                   |
-| 生年月日 | 1984/01/21                            |
-| 居住地  | 埼玉県                                   |
-| 最終学歴 | 総合電子専門学校 ゲームプログラミング学科                 |
-| ブログ  | https://kojirooooocks.hatenablog.com/ |
+| key  | value                                     |
+|------|-------------------------------------------|
+| 氏名   | 藤田 雄大（Fujita Yudai)                       |
+| 生年月日 | 1984/01/21                                |
+| 居住地  | 埼玉県                                       |
+| 最終学歴 | 総合電子専門学校 ゲームプログラミング学科                     |
+| ブログ  | [https://kojirooooocks.hatenablog.com/](https://kojirooooocks.hatenablog.com/) |
 
 
 ---
@@ -17,7 +17,7 @@
 
 - PHP + 各種 FW を使用した環境下での CleanArchitecture を意識したバックエンド開発・設計
 - JavaScript / TypeScript + Vue.js を使用したフロントエンド開発
-- PHP 開発の開発基盤の整備（テスト環境等）
+- PHP 開発の開発基盤の整備全般（テスト環境等）
 - Jest や Playwright を使用したフロントエンドのテストコード開発
 - レガシーコードとなっているプロジェクトのバージョンアップ・リファクタリング
 - Github Actions 等を使用した CI/CD 整備
@@ -75,19 +75,16 @@
 
 <img src="https://img.shields.io/badge/React-61DAFB.svg?logo=React&style=flat&logoColor=white"  alt="React"/>
 <img src="https://img.shields.io/badge/Next.js-000000.svg?logo=Next.js&style=flat&logoColor=white"  alt="Next.js"/>
-
 <img src="https://img.shields.io/badge/Ruby-CC342D.svg?logo=ruby&style=flat&logoColor=white" alt="Ruby" />
 <img src="https://img.shields.io/badge/Rails-CC0000?style=flat-square&logo=Ruby-on-Rails&logoColor=white" alt="Ruby-on-Rails" />
-
 <img src="https://img.shields.io/badge/Python-3776AB.svg?logo=Python&style=flat&logoColor=white" alt="Python" />
 <img src="https://img.shields.io/badge/Django-092E20.svg?logo=Django&style=flat&logoColor=white" alt="Django" />
-
 <img src="https://img.shields.io/badge/Go-00ADD8.svg?logo=go&style=flat&logoColor=white" alt="Go" />
 <img src="https://img.shields.io/badge/Echo-007a92.svg?logo=go&style=flat&logoColor=white" alt="Echo" />
 
 ---
 
-## 職務経歴詳細（直近3年）
+## 職務経歴詳細（直近2〜3年）
 
 ### DF 社（2023/06〜現在）
 
@@ -95,6 +92,34 @@
   - 週 3
 - **プロジェクト規模**
   - 8 名（エンジニア 4 名）
+- **プロジェクト担当箇所**
+  - フィンテック系自社新規サービスの開発
+  - バックエンド・フロントエンド問わず全般の開発を担当
+  - Amazon Cognito を使用した認証部分を担当
+- **ツール**
+  - PHP 8.2
+  - Laravel 10
+  - MySQL 8
+  - Vue.js 3
+  - Inertia.js
+  - Tailwind CSS 3
+
+### K 社（2022/12〜現在）
+
+- **稼働量**
+  - 週 2〜週 3
+- **プロジェクト規模**
+  - 5〜6 名（エンジニア 1〜2 名）
+- **プロジェクト担当箇所**
+  - 運用中の自社サービス（業務向けマッチングプラットフォーム）の保守・開発
+  - バックエンド・フロントエンド問わず全般の開発を担当
+  - MinIO や MailHog 追加などローカル開発環境の整備
+  - バックエンドのテスト文化導入支援
+- **ツール**
+  - PHP 7.2
+  - Laravel 6
+  - MySQL 8
+  - Nuxt.js 2
 
 ### FM 社（2022/12〜現在）
 
@@ -102,14 +127,17 @@
   - 週 1.5〜週 2
 - **プロジェクト規模**
   - 4 名（エンジニア 3 名）
-
-### K 社（2022/12〜現在）
-
-- **稼働量**
-  - 週 2〜週 3
-- **プロジェクト規模**
-  - 20〜30 名（エンジニア 6 名）
-  - プロジェクト単位： 5〜6 名（エンジニア 2 名）
+- **プロジェクト詳細**
+  - 自社新規サービス（アンケート作成サービス）の開発
+  - 比較的バックエンドの比重が多いが、バックエンド・フロントエンド問わず全般の開発を担当
+  - AWS 上にステージング・本番環境を構築（EC2, RDS, Cache, AppRunner)
+  - Github Actions を用いた自動テスト・自動デプロイの構築
+  - PAY.JP を使用したサブスクリプション決済部分を担当
+- **ツール**
+  - PHP 8.1
+  - Laravel 10
+  - MySQL 8
+  - Nuxt.js 2
 
 ### H 社（2022/08〜2023/06）
 
@@ -117,45 +145,76 @@
   - 月 100 時間（週 3) 
 - **プロジェクト規模**
   - 7 名（エンジニア 3 名）
+- **プロジェクト詳細**
+  - 自社新規サービス（組織サーベイ・組織管理サービス）の開発
+  - バックエンド・フロントエンド問わず全般の開発を担当
+  - PHPStan, PHP-CS-Fixer の導入・設定
+  - Storybook の導入・設定
+  - Jest の導入・設定
+  - Playwright の導入・設定
+  - Github Actions を用いた自動テストの構築
+- **ツール**
+  - PHP 8.1
+  - Laravel 9
+  - MySQL 8
+  - Vue.js 3
+  - Pinia 2
+  - Chart.js 3
+  - Inertia.js
 
 ### TB 社（2022/01〜2022/12）
 
 - **稼働量**
   - 月 100 時間（週 3)
 - **プロジェクト規模**
-  - 〜30 名（エンジニア 6 名）
-  - プロジェクト単位： 3〜4 名（エンジニア 1 名）
+  - 3〜4 名（エンジニア 1 名）
+- **プロジェクト詳細**
+  - 運用中の自社サービス（美容系情報サービス）の保守・開発
+  - バックエンド API の開発を担当
+  - 独自で実装されていたバリデーションを Laravel の FormRequest に以降
+  - Controller からビジネスロジックを切り離してよりテスタブルなロジックに変更
+- **ツール**
+  - PHP 7.3
+  - Laravel 8
+  - MySQL 8
 
 ### YM社（2020/03〜2022/06）
 
 - **稼働量**
   - 2020/03〜2021/12 => 週 5
   - 2022/01〜2022/06 => 週 3
-
 - **プロジェクト規模**
-  - 〜60 名（エンジニア 6 名）
-  - プロジェクト単位： 2〜3 名（エンジニア 1 名）
+  - 3〜4 名（エンジニア 1 名）
+- **プロジェクト詳細**
+  - 運用中の自社サービス（BtoC 向けマッチングプラットフォーム）の保守・開発
+  - バックエンド・フロントエンド問わず全般の開発を担当
+  - SBPS 決済代行サービスの PayPay 決済の導入開発
+  - 実装済みの PAY.JP を使用した実装決済周りの改修
+  - CircleCI の実行速度改善
+  - 楽天ペイ決済の導入開発
+  - Controller からビジネスロジックを切り離してよりテスタブルなロジックに変更
+
 
 ### 過去の職歴
 
-[こちら](https://docs.google.com/document/d/1x7QgoWSjXnER4zvwVO6DW4NnvHwQEH1J)を記載
+[こちら](https://docs.google.com/document/d/1x7QgoWSjXnER4zvwVO6DW4NnvHwQEH1J)を参照してください。
 
 ## 業務外活動
 
 ###  LT発表資料
 
 - **レガシー感謝の日で発表してみたかった話**
-  - https://speakerdeck.com/kojirock5260/regasigan-xie-falseri-defa-biao-sitemitakatutahua
+  - [https://speakerdeck.com/kojirock5260/regasigan-xie-falseri-defa-biao-sitemitakatutahua](https://speakerdeck.com/kojirock5260/regasigan-xie-falseri-defa-biao-sitemitakatutahua)
 - **初心者にやさしい LT 会**
-  - https://speakerdeck.com/kojirock5260/chu-xin-zhe-niyasasiilthui-1
+  - [https://speakerdeck.com/kojirock5260/chu-xin-zhe-niyasasiilthui-1](https://speakerdeck.com/kojirock5260/chu-xin-zhe-niyasasiilthui-1)
 
 ### 運用中Slackチーム
 
 - **challenge-every-month(月 1 回なにかにチャレンジする）**
-  - https://gw-advent.9wick.com/calendars/9
+  - [https://gw-advent.9wick.com/calendars/9](https://gw-advent.9wick.com/calendars/9)
 
 - **write-blog-every-week(週 1 回ブログを書く）**
-  - https://kojirooooocks.hatenablog.com/entry/2018/09/21/223841
+  - [https://kojirooooocks.hatenablog.com/entry/2018/09/21/223841](https://kojirooooocks.hatenablog.com/entry/2018/09/21/223841)
 
     
 ## 意欲・興味
@@ -170,4 +229,4 @@
   
 - 業務委託としての稼働を希望しています
 - フルリモートワークの勤務を希望しています（限定的な出社に関しては可）
-- ジョイン〜3 ヶ月程度、互いの試用期間として、週 2.5〜週 3 の稼働を希望しています（互いに問題がなければ次月からは週 5 稼働など）
+- ジョイン〜3 ヶ月程度、互いの試用期間として、週 2.5〜週 3 の稼働を希望しており、互いに問題なければ週 5 の稼働にシフトできます
