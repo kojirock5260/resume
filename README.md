@@ -4,6 +4,12 @@
 
 https://github.com/kawamataryo/resume
 
+## Data
+
+- [GitHub Pages](https://kojirock5260.github.io/resume/)
+- [PDF](https://github.com/kojirock5260/resume/releases)
+- [File](https://github.com/kojirock5260/resume/blob/master/docs/README.md)
+
 ## Features
 
 ### 💅 Lint text
