@@ -2,6 +2,7 @@
   "name": "resume-template",
   "version": "1.0.0",
   "description": "resume template",
+  "license": "UNLICENSED",
   "scripts": {
     "lint": "textlint docs/README.md",
     "fix": "textlint --fix docs/README.md",
