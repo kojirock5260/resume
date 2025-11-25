@@ -89,27 +89,27 @@ Amazon Cognito / KYC / Laravel-permission（ロールベースアクセス制御
 
 ### 直近の主要案件
 
-**DF社（2023/06〜現在）** フィンテック系サービス / 週 3 / エンジニア 4 名
+#### **DF社（2023/06〜現在）** フィンテック系サービス / 週 3 / エンジニア 4 名
 
 - Amazon Cognito を使用した認証基盤の設計・実装
 - KYC ライブラリを使用した本人確認フローの実装
 - Laravel-permission を使用したロールベースアクセス制御
 - PHP 8.3 / Laravel 11 / MySQL 8 / Vue.js 3 / Inertia.js
 
-**FM社（2022/12〜2023/07）** アンケートサービス / 週 1.5〜2 / エンジニア 3 名
+#### **FM社（2022/12〜2023/07）** アンケートサービス / 週 1.5〜2 / エンジニア 3 名
 
 - PAY.JP を使用したサブスクリプション・従量課金の設計・実装
 - AWS 環境構築（EC2, RDS, AppRunner）
 - Github Actions による自動テスト・デプロイ構築
 - PHP 8.1 / Laravel 10 / MySQL 8 / Nuxt.js 2
 
-**YM社（2020/03〜2022/06）** 既存サービス追加開発 / エンジニア 4 名
+#### **YM社（2020/03〜2022/06）** 既存サービス追加開発 / エンジニア 4 名
 
 - SBPS、PAY.JP、楽天 Pay、PayPay(GMO) の決済実装
 - jQuery ベースのフロントエンドを一部 Vue 化
 - PHP 7.3 / CakePHP 3.6 / Vue 2+3 / Redis / ElasticSearch
 
-**H社（2022/08〜2023/06）** 組織サーベイサービス / 週 3 / エンジニア 3 名
+#### **H社（2022/08〜2023/06）** 組織サーベイサービス / 週 3 / エンジニア 3 名
 
 - PHPStan、PHP-CS-Fixer の導入・設定
 - Storybook、Jest、Playwright の導入・設定
