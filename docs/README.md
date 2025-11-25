@@ -2,218 +2,159 @@
 
 ## 基本情報
 
-| key  | value                                     |
-|------|-------------------------------------------|
-| 氏名   | 藤田 雄大（Fujita Yudai)                       |
-| 生年月日 | 1984/01/21                                |
-| 居住地  | 埼玉県                                       |
-| 最終学歴 | 総合電子専門学校 ゲームプログラミング学科                     |
-| ブログ  | [https://kojirooooocks.hatenablog.com/](https://kojirooooocks.hatenablog.com/) |
-
+| key      | value                      |
+|----------|----------------------------|
+| 氏名     | 藤田 雄大（Fujita Yudai)    |
+| 生年月日 | 1984/01/21                 |
+| 居住地   | 埼玉県                      |
+| ブログ   | https://kojirooooocks.hatenablog.com/ |
 
 ---
 
-## 保有スキル
+## 専門領域
 
-- PHP + 各種 FW を使用した環境下での CleanArchitecture を意識したバックエンド開発・設計
-- JavaScript / TypeScript + Vue.js を使用したフロントエンド開発
-- PHP 開発の開発基盤の整備全般（テスト環境等）
-- Jest や Playwright を使用したフロントエンドのテストコード開発
-- レガシーコードとなっているプロジェクトのバージョンアップ・リファクタリング
-- Github Actions 等を使用した CI/CD 整備
+### 決済・課金
+
+- 決済サービス連携の設計・実装（PAY.JP / GMO / 楽天 Pay / Amazon Pay / SBPS）
+- サブスクリプション・従量課金・チケット制など多様な課金モデルの実装
+- 本人確認（KYC）・認証基盤（Amazon Cognito）の構築
+
+### 設計・開発
+
+- CleanArchitecture を意識したバックエンド設計
+- Laravel / CakePHP でのサーバーサイド開発
+- Vue.js / Nuxt.js でのフロントエンド開発
+
+### テスト・品質
+
+- PHPUnit / Jest / Playwright を使用したテスト環境の構築
+- PHPStan / PHP-CS-Fixer の導入による静的解析・コード整形
+- Storybook の導入・設定
+- テスト文化のないチームへの導入支援
+
+### CI/CD・開発基盤
+
+- Github Actions / CircleCI を使用した自動テスト・自動デプロイの構築
+- Docker を使用したローカル開発環境の整備
+- レガシーコードのバージョンアップ・リファクタリング
+
+---
+
+## 決済・課金システム実績
+
+### 連携経験のある決済サービス
+
+| サービス | 実装内容 |
+|----------|----------|
+| PAY.JP | サブスクリプション決済、都度決済、Webhook連携 |
+| GMO (PayPay) | 決済システム構築 |
+| SBPS決済代行 | PayPay決済の実装 |
+| 楽天Pay | 決済システム構築 |
+| Amazon Pay | ECサイトへの決済導入 |
+
+
+### 認証・本人確認
+
+Amazon Cognito / KYC / Laravel-permission（ロールベースアクセス制御）
 
 ---
 
 ## 技術スタック
 
-
-### 言語
-
-<img src="https://img.shields.io/badge/PHP-777BB4.svg?logo=php&style=flat&logoColor=white"  alt="PHP"/>
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?logo=JavaScript&style=flat&logoColor=white"  alt="JavaScript"/>
-<img src="https://img.shields.io/badge/TypeScript-3178C6.svg?logo=TypeScript&style=flat&logoColor=white"  alt="TypeScript"/>
-
-### フレームワーク
-
-<img src="https://img.shields.io/badge/Laravel-FF2D20.svg?logo=laravel&style=flatt&logoColor=white"  alt="Laravel"/>
-<img src="https://img.shields.io/badge/CakePHP-D33C43.svg?logo=cakephp&style=flat&logoColor=white"  alt="CakePHP"/>
-<img src="https://img.shields.io/badge/Symfony-000000.svg?logo=symfony&style=flat&logoColor=white"  alt="Symfony"/>
-<img src="https://img.shields.io/badge/CodeIgniter-EF4223.svg?logo=codeigniter&style=flat&logoColor=white"  alt="CodeIgniter"/>
-<img src="https://img.shields.io/badge/Vue.js-4FC08D.svg?logo=Vue.js&style=flat&logoColor=white"  alt="Vue"/>
-<img src="https://img.shields.io/badge/Nuxt.js-00DC82.svg?logo=Nuxt.js&style=flat&logoColor=white"  alt="Nuxt.js"/>
-
-### その他
-
-#### データベース
-
-<img src="https://img.shields.io/badge/MySQL-4479A1.svg?logo=mysql&style=flat&logoColor=white"  alt="MySQL"/>
-<img src="https://img.shields.io/badge/PostgreSQL-4169E1.svg?logo=postgresql&style=flat&logoColor=white"  alt="PostgreSQL"/>
-<img src="https://img.shields.io/badge/MariaDB-003545.svg?logo=mariadb&style=flat&logoColor=white"  alt="MariaDB"/>
-<img src="https://img.shields.io/badge/DynamoDB-4053D6.svg?logo=amazondynamodb&style=flat&logoColor=white"  alt="DynamoDB"/>
-<img src="https://img.shields.io/badge/MongoDB-47A248.svg?logo=mongodb&style=flat&logoColor=white"  alt="MongoDB"/>
-<img src="https://img.shields.io/badge/Redis-DC382D.svg?logo=redis&style=flat&logoColor=white"  alt="Redis"/>
-
-#### ツール
-
-<img src="https://img.shields.io/badge/Inertia.js-9553E9.svg?logo=Inertia&style=flat&logoColor=white"  alt="Inertia.js"/>
-<img src="https://img.shields.io/badge/Vite-646CFF.svg?logo=Vite&style=flat&logoColor=white"  alt="Vite"/>
-<img src="https://img.shields.io/badge/Vuetify-1867C0.svg?logo=Vuetify&style=flat&logoColor=white"  alt="Vuetify"/>
-<img src="https://img.shields.io/badge/Docker-2496ED.svg?logo=Docker&style=flat&logoColor=white"  alt="Docker"/>
-<img src="https://img.shields.io/badge/Ansible-EE0000.svg?logo=ansible&style=flat&logoColor=white"  alt="Ansible"/>
-<img src="https://img.shields.io/badge/Jest-C21325.svg?logo=Jest&style=flat&logoColor=white"  alt="Jest"/>
-<img src="https://img.shields.io/badge/Playwright-2EAD33.svg?logo=Playwright&style=flat&logoColor=white"  alt="Playwright"/>
-<img src="https://img.shields.io/badge/Github Actions-2088FF.svg?logo=GithubActions&style=flat&logoColor=white" alt="Github Actions"/>
-<img src="https://img.shields.io/badge/Jenkins-D24939.svg?logo=Jenkins&style=flat&logoColor=white" alt="Jenkins"/>
-<img src="https://img.shields.io/badge/Amazon AWS-232F3E.svg?logo=Amazonaws&style=flat&logoColor=white"  alt="AmazonAWS"/>
-
-#### サーバ
-
-<img src="https://img.shields.io/badge/NGINX-009639.svg?logo=nginx&style=flat&logoColor=white"  alt="NGINX"/>
-<img src="https://img.shields.io/badge/Apache-D22128.svg?logo=apache&style=flat&logoColor=white"  alt="Apache"/>
-
-### 個人勉強レベル
-
-<img src="https://img.shields.io/badge/React-61DAFB.svg?logo=React&style=flat&logoColor=white"  alt="React"/>
-<img src="https://img.shields.io/badge/Next.js-000000.svg?logo=Next.js&style=flat&logoColor=white"  alt="Next.js"/>
-<img src="https://img.shields.io/badge/Ruby-CC342D.svg?logo=ruby&style=flat&logoColor=white" alt="Ruby" />
-<img src="https://img.shields.io/badge/Rails-CC0000?style=flat-square&logo=Ruby-on-Rails&logoColor=white" alt="Ruby-on-Rails" />
-<img src="https://img.shields.io/badge/Python-3776AB.svg?logo=Python&style=flat&logoColor=white" alt="Python" />
-<img src="https://img.shields.io/badge/Django-092E20.svg?logo=Django&style=flat&logoColor=white" alt="Django" />
-<img src="https://img.shields.io/badge/Go-00ADD8.svg?logo=go&style=flat&logoColor=white" alt="Go" />
-<img src="https://img.shields.io/badge/Echo-007a92.svg?logo=go&style=flat&logoColor=white" alt="Echo" />
+| 分類 | 技術 |
+|------|------|
+| 言語 | PHP / TypeScript / JavaScript |
+| FW | Laravel / CakePHP / Symfony / Vue.js / Nuxt.js |
+| DB | MySQL / PostgreSQL / Redis |
+| AWS | EC2 / RDS / S3 / SQS / CloudFront / Lambda |
+| テスト | PHPUnit / Jest / Playwright |
+| CI/CD | Github Actions / CircleCI |
+| その他 | Docker / PHPStan / Storybook |
 
 ---
 
-## 職務経歴詳細（直近2〜3年）
+## 職務経歴
 
-### DF 社（2023/06〜現在）
+### 決済・認証関連の案件
 
-- **稼働量**
-  - 週 3
-- **プロジェクト規模**
-  - 8 名（エンジニア 4 名）
-- **プロジェクト担当箇所**
-  - フィンテック系自社新規サービスの開発
-  - バックエンド・フロントエンド問わず全般の開発を担当
-  - Amazon Cognito を使用した認証部分を担当
-  - Laravel-permission を使用した権限周りの担当
-    - KYC ライブラリを使用した本人確認処理
-- **ツール**
-  - PHP 8.3
-  - Laravel 11
-  - MySQL 8
-  - Vue.js 3
-  - Inertia.js
-  - Tailwind CSS 3
+| 期間 | 会社 | 内容 | 決済・認証 |
+|------|------|------|------------|
+| 2023/06〜現在 | DF社 | フィンテック系サービス新規開発 | Cognito認証、KYC、権限管理 |
+| 2022/12〜2023/07 | FM社 | アンケートサービス新規開発 | PAY.JP（サブスク・従量課金） |
+| 2020/03〜2022/06 | YM社 | 既存サービス追加開発 | SBPS、PAY.JP、楽天Pay、PayPay(GMO) |
+| 2019/08〜2020/03 | GM社 | Webサービス新規開発 | PAY.JP |
+| 2017/10〜2019/08 | CP社 | ECサイト改修・機能追加 | Amazon Pay |
 
+---
 
-### TP 社（2024/02〜現在）
+### 直近の主要案件
 
-- **稼働量**
-  - 週 1〜2.5
-- **プロジェクト規模**
-  - プロジェクトによる
-- **プロジェクト担当箇所**
-  - OCR を利用した業務効率化ツールの運用・新規追加等
-  - クラウドファンディングサイトの機能追加・バグ修正等
-  - ビジネスマッチングサイトの機能追加・バグ修正等
-- **ツール**
-  - PHP 7〜8
-  - Laravel 8〜10, CodeIgniter2, CakePHP 3
-  - MySQL 5, 8
-  - React
+**DF社（2023/06〜現在）** フィンテック系サービス / 週 3 / エンジニア 4 名
 
-### K 社（2022/12〜現在）
+- Amazon Cognito を使用した認証基盤の設計・実装
+- KYC ライブラリを使用した本人確認フローの実装
+- Laravel-permission を使用したロールベースアクセス制御
+- PHP 8.3 / Laravel 11 / MySQL 8 / Vue.js 3 / Inertia.js
 
-- **稼働量**
-  - 週 3
-- **プロジェクト規模**
-  - 5〜6 名（エンジニア 1〜2 名）
-- **プロジェクト担当箇所**
-  - 運用中の自社サービス（業務向けマッチングプラットフォーム）の保守・開発
-  - バックエンド・フロントエンド問わず全般の開発を担当
-  - MinIO や MailHog 追加などローカル開発環境の整備
-  - バックエンドのテスト文化導入支援
-- **ツール**
-  - PHP 7.2
-  - Laravel 6
-  - MySQL 8
-  - Nuxt.js 2
+**FM社（2022/12〜2023/07）** アンケートサービス / 週 1.5〜2 / エンジニア 3 名
 
-### FM 社（2022/12〜2023/07）
+- PAY.JP を使用したサブスクリプション・従量課金の設計・実装
+- AWS 環境構築（EC2, RDS, AppRunner）
+- Github Actions による自動テスト・デプロイ構築
+- PHP 8.1 / Laravel 10 / MySQL 8 / Nuxt.js 2
 
-- **稼働量**
-  - 週 1.5〜週 2
-- **プロジェクト規模**
-  - 4 名（エンジニア 3 名）
-- **プロジェクト詳細**
-  - 自社新規サービス（アンケート作成サービス）の開発
-  - 比較的バックエンドの比重が多いが、バックエンド・フロントエンド問わず全般の開発を担当
-  - AWS 上にステージング・本番環境を構築（EC2, RDS, Cache, AppRunner)
-  - Github Actions を用いた自動テスト・自動デプロイの構築
-  - PAY.JP を使用したサブスクリプション決済部分を担当
-- **ツール**
-  - PHP 8.1
-  - Laravel 10
-  - MySQL 8
-  - Nuxt.js 2
+**YM社（2020/03〜2022/06）** 既存サービス追加開発 / エンジニア 4 名
 
-### H 社（2022/08〜2023/06）
+- SBPS、PAY.JP、楽天 Pay、PayPay(GMO) の決済実装
+- jQuery ベースのフロントエンドを一部 Vue 化
+- PHP 7.3 / CakePHP 3.6 / Vue 2+3 / Redis / ElasticSearch
 
-- **稼働量**
-  - 月 100 時間（週 3) 
-- **プロジェクト規模**
-  - 7 名（エンジニア 3 名）
-- **プロジェクト詳細**
-  - 自社新規サービス（組織サーベイ・組織管理サービス）の開発
-  - バックエンド・フロントエンド問わず全般の開発を担当
-  - PHPStan, PHP-CS-Fixer の導入・設定
-  - Storybook の導入・設定
-  - Jest の導入・設定
-  - Playwright の導入・設定
-  - Github Actions を用いた自動テストの構築
-- **ツール**
-  - PHP 8.1
-  - Laravel 9
-  - MySQL 8
-  - Vue.js 3
-  - Pinia 2
-  - Chart.js 3
-  - Inertia.js
+**H社（2022/08〜2023/06）** 組織サーベイサービス / 週 3 / エンジニア 3 名
 
+- PHPStan、PHP-CS-Fixer の導入・設定
+- Storybook、Jest、Playwright の導入・設定
+- Github Actions を用いた自動テストの構築
+- PHP 8.1 / Laravel 9 / Vue.js 3 / Inertia.js
 
-### 過去の職歴
+---
 
-[こちら](https://docs.google.com/document/d/1x7QgoWSjXnER4zvwVO6DW4NnvHwQEH1J)を参照してください。
+### その他の経歴
+
+| 期間 | 会社 | 概要 | 貢献 |
+|------|------|------|------|
+| 2024/02〜現在 | TP社 | 複数プロジェクトの保守・開発 | Laravel/CakePHP/React |
+| 2022/12〜2024/01 | K社 | マッチングPF保守・開発 | テスト文化導入、開発環境整備 |
+| 2022/01〜2022/12 | TB社 | 既存サービス追加開発 | CleanArchitecture、テスト開発 |
+| 2020/03〜2020/10 | PT社 | Webサービス新規開発 | AWS構築、デプロイフロー構築 |
+| 2017/10〜2019/08 | CP社 | ECサイト改修・機能追加 | テックリード、Docker化、AWS構築 |
+
+---
+
+### 過去の職歴（詳細）
+
+上記以前の職歴は[こちら](https://docs.google.com/document/d/1x7QgoWSjXnER4zvwVO6DW4NnvHwQEH1J)を参照してください。
+
+---
 
 ## 業務外活動
 
-###  LT発表資料
+### 技術発信
 
-- **レガシー感謝の日で発表してみたかった話**
-  - [https://speakerdeck.com/kojirock5260/regasigan-xie-falseri-defa-biao-sitemitakatutahua](https://speakerdeck.com/kojirock5260/regasigan-xie-falseri-defa-biao-sitemitakatutahua)
-- **初心者にやさしい LT 会**
-  - [https://speakerdeck.com/kojirock5260/chu-xin-zhe-niyasasiilthui-1](https://speakerdeck.com/kojirock5260/chu-xin-zhe-niyasasiilthui-1)
+- **ブログ**: 2018 年から週 1 回ペースで技術ブログを継続中
+  - https://kojirooooocks.hatenablog.com/
 
-### 運用中Slackチーム
+### LT発表
 
-- **challenge-every-month(月 1 回なにかにチャレンジする）**
-  - [https://gw-advent.9wick.com/calendars/9](https://gw-advent.9wick.com/calendars/9)
+- [レガシー感謝の日で発表してみたかった話](https://speakerdeck.com/kojirock5260/regasigan-xie-falseri-defa-biao-sitemitakatutahua)
+- [初心者にやさしい LT 会](https://speakerdeck.com/kojirock5260/chu-xin-zhe-niyasasiilthui-1)
 
-- **write-blog-every-week(週 1 回ブログを書く）**
-  - [https://kojirooooocks.hatenablog.com/entry/2018/09/21/223841](https://kojirooooocks.hatenablog.com/entry/2018/09/21/223841)
+### コミュニティ運営
 
-    
-## 意欲・興味
+- **write-blog-every-week**: 週 1 回ブログを書く Slack コミュニティを運営中
 
-- アジャイルな開発スタイルを好んでおります
-- エンジニア・非エンジニア問わず円滑にコミュニケーションを取ることが得意です
-- バックエンド・フロントエンド・インフラ問わず、未経験の領域に抵抗がなく、勉強しながら吸収してくのが得意であり好きです
-- 言われたものを黙々と作るのではなく、必要があれば要件から一緒に話して考えていきたいと思っています
-- 比較的忙しい職場が好きです
+---
 
 ## 希望条件
-  
-- 業務委託としての稼働を希望しています
-- フルリモートワークの勤務を希望しています（限定的な出社に関しては可）
-- ジョイン〜3 ヶ月程度、互いの試用期間として、週 2.5〜週 3 の稼働を希望しており、互いに問題なければ週 5 の稼働にシフトできます
+
+- 業務委託（フルリモート）
+- 最初の 3 か月は週 2.5〜3 稼働、その後週 5 へ移行可
