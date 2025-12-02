@@ -1,6 +1,6 @@
 # kojireock5260's resume
 
-## Sample
+## Based on
 
 https://github.com/kawamataryo/resume
 
