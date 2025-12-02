@@ -39,6 +39,11 @@
 - Docker を使用したローカル開発環境の整備
 - レガシーコードのバージョンアップ・リファクタリング
 
+### AI支援開発
+
+- Claude Code を活用した開発効率化
+- セキュリティを考慮した AI ツール運用（機密性の高いプロジェクトでのディレクトリ制限等）
+
 ---
 
 ## 決済・課金システム実績
@@ -70,7 +75,7 @@ Amazon Cognito / KYC / Laravel-permission（ロールベースアクセス制御
 | AWS | EC2 / RDS / S3 / SQS / CloudFront / Lambda |
 | テスト | PHPUnit / Jest / Playwright |
 | CI/CD | Github Actions / CircleCI |
-| その他 | Docker / PHPStan / Storybook |
+| その他 | Docker / PHPStan / Storybook / Claude Code |
 
 ---
 
@@ -90,12 +95,12 @@ Amazon Cognito / KYC / Laravel-permission（ロールベースアクセス制御
 
 ### 直近の主要案件
 
-#### **DF社（2023/06〜現在）** フィンテック系サービス / 週 3 / エンジニア 4 名
+#### **DF社（2023/06〜現在）** フィンテック系サービス / 週 4 / エンジニア 4 名
 
 - Amazon Cognito を使用した認証基盤の設計・実装
 - KYC ライブラリを使用した本人確認フローの実装
 - Laravel-permission を使用したロールベースアクセス制御
-- PHP 8.3 / Laravel 11 / MySQL 8 / Vue.js 3 / Inertia.js
+- PHP 8.3 / Laravel 12 / MySQL 8 / Vue.js 3 / Inertia.js
 
 #### **FM社（2022/12〜2023/07）** アンケートサービス / 週 1.5〜2 / エンジニア 3 名
 
@@ -158,4 +163,8 @@ Amazon Cognito / KYC / Laravel-permission（ロールベースアクセス制御
 ## 希望条件
 
 - 業務委託（フルリモート）
-- 最初の 3 か月は週 2.5〜3 稼働、その後週 5 へ移行可
+- 週 2〜2.5 稼働から開始、相互に問題なければ稼働増も可能
+- 土日・平日夜間の稼働が許可されていると嬉しいです
+- 平日日中の MTG は調整可能です
+- 基本的に PC の前にいるためレスポンスは早めです
+- Go 案件も対応可能（実務未経験、AI 支援での開発経験あり）
