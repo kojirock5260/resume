@@ -97,13 +97,17 @@ Amazon Cognito / KYC / Laravel-permission（ロールベースアクセス制御
 - **形態素解析によるコメント感情集計バッチ**：MeCab を用いた形態素解析で、運用中の EC サイトのネガティブ／ポジティブコメント件数を集計し、悪質なコメントはバッチで削除する機能を実装（NLP／運用自動化）
 - **デプロイ自動化ツール（Fabric / Fabfile）**：指定したサーバーへのデプロイや、事前のキャッシュ削除などを自動化するツールを実装（デプロイ自動化）
 
+### Swift
+
+- Objective-C → Swift 移行：グループ会社の社内アプリを Objective-C から Swift へ全面書き換え（モバイル）
+
 ---
 
 ## 技術スタック
 
 | 分類 | 技術 |
 |---|---|
-| 言語 | （メイン）PHP / TypeScript / JavaScript　（サブ）Go / Python |
+| 言語 | （メイン）PHP / TypeScript / JavaScript （サブ）Go / Python / Swift |
 | FW | Laravel / CakePHP / Symfony / Vue.js / Nuxt.js / Django |
 | DB | MySQL / PostgreSQL / Redis |
 | AWS | EC2 / RDS / S3 / SQS / CloudFront / Lambda |
@@ -206,4 +210,5 @@ Amazon Cognito / KYC / Laravel-permission（ロールベースアクセス制御
 - 土日・平日夜間の稼働が可能だと嬉しい
 - 平日日中の MTG は調整可能
 - 基本的に PC の前にいるため、レスポンスは早め
-- Go / Python 案件も対応可能（主軸は PHP / TS ですが、Go / Python も 小さなツールの開発経験は有り、AI 支援を活用して主軸に近いスピードで開発可能。その他新言語へのキャッチアップも早い）
+- Go / Python 案件も対応可能（主軸は PHP / TS ですが、Go / Python も 小さなツールの開発経験は有り、AI 支援を活用して主軸に近いスピードで開発可能）
+- Swift 案件はキャッチアップを必要とするが AI 支援を活用することにより、素早く戦力になることが可能
