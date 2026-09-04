@@ -169,12 +169,11 @@
 
 ### 個人開発（Chrome 拡張、2026 年 8 月公開）
 
-- Snap Redact：選択した範囲に隠す・囲う・矢印の 3 種類のマークを付け、クリップボードや PNG へ出力する拡張。モザイクとぼかしは復元できるため採用せず、不透明な塗りつぶしのみ。権限を activeTab / scripting / contextMenus に絞り、外部通信なし
-  - https://chromewebstore.google.com/detail/snap-redact/nfbcdbkbgboollbanfadblakbihlkbpe
-  - https://github.com/kojirock5260/snap-redact
-- Local API Client：Chrome のサイドパネルで動く localhost 専用の REST クライアント。ホスト権限を localhost / 127.0.0.1 に限定し、履歴と保存リクエストは chrome.storage.local のみで外部通信なし。curl コマンドのコピーと JSON のエクスポート／インポートに対応
-  - https://chromewebstore.google.com/detail/local-api-client/ihmoinkdbohnodnjpkdmenkmiikllfgp
-  - https://github.com/kojirock5260/local-api-client
+- **Snap Redact**：選んだ範囲に隠す・囲う・矢印のマークを付け、クリップボードや PNG へ出力する拡張。復元できるモザイク・ぼかしは採用せず、塗りつぶしのみ
+  - [Chrome ウェブストア](https://chromewebstore.google.com/detail/snap-redact/nfbcdbkbgboollbanfadblakbihlkbpe) / [GitHub](https://github.com/kojirock5260/snap-redact)
+- **Local API Client**：Chrome のサイドパネルで動く localhost 専用の REST クライアント
+  - [Chrome ウェブストア](https://chromewebstore.google.com/detail/local-api-client/ihmoinkdbohnodnjpkdmenkmiikllfgp) / [GitHub](https://github.com/kojirock5260/local-api-client)
+- 共通の設計：外部通信なし、権限は最小限（Snap Redact は activeTab / scripting / contextMenus のみ、Local API Client はホスト権限を localhost に限定）
 - どちらも TypeScript / MIT でソースを公開。Claude Code を使って設計・実装・ストア公開まで実施
 
 ### 技術発信
