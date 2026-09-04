@@ -6,9 +6,18 @@ https://github.com/kawamataryo/resume
 
 ## Data
 
-- [GitHub Pages](https://kojirock5260.github.io/resume/)
-- [PDF](https://github.com/kojirock5260/resume/releases)
-- [File](https://github.com/kojirock5260/resume/blob/master/docs/README.md)
+| Version | GitHub Pages | Markdown | PDF (Releases) |
+|---|---|---|---|
+| 業務委託版 | https://kojirock5260.github.io/resume/ | [docs/README.md](docs/README.md) | resume.pdf |
+| 正社員版 | https://kojirock5260.github.io/resume/fulltime.html | [docs/fulltime.md](docs/fulltime.md) | resume-fulltime.pdf |
+
+PDF は [Releases](https://github.com/kojirock5260/resume/releases) から取得できます。
+
+### 編集時の注意
+
+- 2 ファイルは共通部分を二重管理しています（md-to-pdf と textlint が Jekyll の include を処理できないため）。`docs/README.md` を直したら `docs/fulltime.md` にも反映してください。差分は希望条件（希望ポジション）・TK社の厚み・リード経験のみです
+- `［要確認：…］` は本人しか分からない数字・事実のプレースホルダーです。公開前に `npm run todo` で残りがないことを確認してください
+- LLM 組み込み実績は未着手のため、追記位置を HTML コメントで確保しています
 
 ## Features
 
@@ -19,7 +28,7 @@ Automatic proofreading with [textlint](https://github.com/textlint/textlint).
 ```
 $ npm run fix
 ```
-It is also automatically executed when pre-commit by [husky](https://github.com/typicode/husky).  
+`npm run lint` is also executed on pre-commit by [husky](https://github.com/typicode/husky) (`npm install` sets up the hook).  
 proofreading rules are set with `.textlintrc`.
 
 
@@ -37,7 +46,7 @@ The output PDF can be styled as you like with CSS. Edit the `pdf-configs/style.c
 
 ### 🛠 Create release
 
-When you push with a `v**` tag, GitHub Actions will run the build, generate the PDF, create a Release, and register the PDF to Assets.
+When you push with a `v**` tag, GitHub Actions will run the build, generate both PDFs, create a Release, and register `resume.pdf` / `resume-fulltime.pdf` to Assets.
 
 ```
 $ git commit -m "add job"

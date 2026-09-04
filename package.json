@@ -5,9 +5,10 @@
   "license": "UNLICENSED",
   "scripts": {
     "prepare": "husky",
-    "lint": "textlint docs/README.md",
-    "fix": "textlint --fix docs/README.md",
-    "build:pdf": "md-to-pdf docs/README.md --config-file ./pdf-configs/config.js"
+    "lint": "textlint docs/README.md docs/fulltime.md",
+    "fix": "textlint --fix docs/README.md docs/fulltime.md",
+    "build:pdf": "md-to-pdf docs/README.md --config-file ./pdf-configs/config.js && md-to-pdf docs/fulltime.md --config-file ./pdf-configs/config.js",
+    "todo": "grep -n '要確認' docs/README.md docs/fulltime.md || true"
   },
   "keywords": [],
   "devDependencies": {
