@@ -1,0 +1,71 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* 日本語の読みやすさ調整: 行長を抑え、行間と余白を広げる */
+
+.page-header {
+  padding: 2rem 1rem 1.6rem;
+}
+.page-header .project-name {
+  font-size: 1.5rem;
+  margin: 0 0 0.3rem;
+}
+.page-header .project-tagline {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.main-content {
+  max-width: 46rem;
+  padding: 2.5rem 1.5rem 4rem;
+  font-size: 1rem;
+  line-height: 1.9;
+}
+/* Web ではヘッダーに題名を出すので、本文先頭の h1 は隠す（PDF には残る） */
+.main-content > h1:first-child {
+  display: none;
+}
+.main-content h2 {
+  font-size: 1.35rem;
+  margin: 3rem 0 1.2rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid #e8e8e8;
+}
+.main-content h3 {
+  font-size: 1.1rem;
+  margin: 2.2rem 0 0.9rem;
+}
+.main-content h4 {
+  font-size: 1rem;
+  margin: 1.8rem 0 0.7rem;
+}
+.main-content p,
+.main-content ul,
+.main-content ol {
+  margin-bottom: 1.2rem;
+}
+.main-content li {
+  margin-bottom: 0.5rem;
+}
+.main-content li > ul {
+  margin: 0.4rem 0 0.2rem;
+}
+.main-content li > ul > li {
+  margin-bottom: 0.3rem;
+}
+.main-content table {
+  font-size: 0.92rem;
+  margin-bottom: 1.6rem;
+}
+.main-content table th,
+.main-content table td {
+  padding: 0.5rem 0.75rem;
+  vertical-align: top;
+}
+/* 見出しの下線で区切るので、Web では区切り線を出さない（PDF には残る） */
+.main-content hr {
+  display: none;
+}
