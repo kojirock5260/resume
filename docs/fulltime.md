@@ -51,6 +51,7 @@
 ### AI 駆動開発と AI 運用ルール設計
 
 - 機密性の高いフィンテック案件で、AI コーディングツールのアクセス範囲をディレクトリ単位で制限し、生成コードはレビューとテストで担保する運用ルールを設計・運用
+- Claude Code で Chrome 拡張 2 本（Snap Redact / Local API Client）を設計から Chrome ウェブストア公開まで実施（TypeScript / MIT、2026 年 8 月）
 - Claude Code / Cursor を、設計の壁打ちから実装・リファクタリングまで日常的に活用
 - AI 支援により、未経験言語への立ち上がりも短期間で対応
 
@@ -154,7 +155,7 @@
 | 分類 | 技術 |
 |---|---|
 | 業務システム・API | PHP（Laravel / CakePHP / Symfony）、TypeScript |
-| フロントエンド | Vue.js / Nuxt.js / React |
+| フロントエンド | Vue.js / Nuxt.js / React / Chrome 拡張（Manifest V3） |
 | ツール・バッチ | Python（Django / Fabric）、Go |
 | モバイル | Swift |
 | DB | MySQL / PostgreSQL / Redis |
@@ -168,6 +169,16 @@
 ---
 
 ## 業務外活動
+
+### 個人開発（Chrome 拡張、2026 年 8 月公開）
+
+- Snap Redact：選択した範囲に隠す・囲う・矢印の 3 種類のマークを付け、クリップボードや PNG へ出力する拡張。モザイクとぼかしは復元できるため採用せず、不透明な塗りつぶしのみ。権限を activeTab / scripting / contextMenus に絞り、外部通信なし
+  - https://chromewebstore.google.com/detail/snap-redact/nfbcdbkbgboollbanfadblakbihlkbpe
+  - https://github.com/kojirock5260/snap-redact
+- Local API Client：Chrome のサイドパネルで動く localhost 専用の REST クライアント。ホスト権限を localhost / 127.0.0.1 に限定し、履歴と保存リクエストは chrome.storage.local のみで外部通信なし。curl コマンドのコピーと JSON のエクスポート／インポートに対応
+  - https://chromewebstore.google.com/detail/local-api-client/ihmoinkdbohnodnjpkdmenkmiikllfgp
+  - https://github.com/kojirock5260/local-api-client
+- どちらも TypeScript / MIT でソースを公開。Claude Code を使って設計・実装・ストア公開まで実施
 
 ### 技術発信
 
