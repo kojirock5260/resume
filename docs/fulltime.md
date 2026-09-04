@@ -226,10 +226,6 @@
 - 2011〜2015 年：Mobage / GREE / Ameba 向けブラウザソーシャルゲームの新規開発・運用・他プラットフォームへの移植。PG リーダーとしてフレームワーク・ミドルウェア選定、外注管理、タスク割り振りを担当。SVN → Git 移行、Vagrant + Chef のローカル環境構築も実施（PHP 5 系 / CakePHP / Symfony / MySQL / Redis / MongoDB）［要確認：当時の DAU / 課金規模の桁］
 - 2016〜2017 年：求人サイトの CakePHP → Laravel 5 フルリプレイス。15 名チームのネイティブゲームのサーバーサイドで、ELK によるログ収集基盤・Ansible・Fabric + Jenkins のデプロイ整備を担当
 
-### 過去の職歴（詳細）
-
-上記以前の職歴は[こちら](https://docs.google.com/document/d/1x7QgoWSjXnER4zvwVO6DW4NnvHwQEH1J)を参照してください。
-
 ---
 
 ## 希望ポジション
