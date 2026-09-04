@@ -1,5 +1,5 @@
-/* 外部フォントは読み込まない（md-to-pdf が networkidle 待ちで固まるため）。
-   CI では fonts-noto-cjk、ローカルでは Hiragino にフォールバックする */
+/* 外部リソースは読み込まない（PDF 生成をオフラインで決定的にするため）。
+   フォントは CI では fonts-noto-cjk、ローカルでは Hiragino にフォールバックする */
 
 body {
   font-size: 12px;

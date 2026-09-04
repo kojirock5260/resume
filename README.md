@@ -15,7 +15,7 @@ PDF は [Releases](https://github.com/kojirock5260/resume/releases) から取得
 
 ### 編集時の注意
 
-- 2 ファイルは共通部分を二重管理しています（md-to-pdf と textlint が Jekyll の include を処理できないため）。`docs/README.md` を直したら `docs/fulltime.md` にも反映してください。差分は希望条件（希望ポジション）・TK社の厚み・リード経験・経歴一覧の表（正社員版は 1 表に統合）です。`class="web-only"` の要素は Web ページのみに表示され、PDF には出ません
+- 2 ファイルは共通部分を二重管理しています（PDF 生成スクリプトと textlint が Jekyll の include を処理できないため）。`docs/README.md` を直したら `docs/fulltime.md` にも反映してください。差分は希望条件（希望ポジション）・TK社の厚み・リード経験・経歴一覧の表（正社員版は 1 表に統合）です。`class="web-only"` の要素は Web ページのみに表示され、PDF には出ません
 - `［要確認：…］` は本人しか分からない数字・事実のプレースホルダーです。公開前に `npm run todo` で残りがないことを確認してください
 - LLM 組み込み実績は未着手のため、追記位置を HTML コメントで確保しています
 
@@ -35,7 +35,7 @@ proofreading rules are set with `.textlintrc`.
 
 ### 📝 Convert MD to PDF
 
-You can generate PDF with [md-to-pdf](https://www.npmjs.com/package/md-to-pdf).
+You can generate PDFs with `scripts/build-pdf.js` ([puppeteer](https://pptr.dev/) + [marked](https://marked.js.org/)). Options live in `pdf-configs/config.js`.
 
 
 ```
