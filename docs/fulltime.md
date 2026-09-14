@@ -66,7 +66,7 @@
 - 破壊・情報の持ち出し・パッケージ導入・案件越境・秘密ファイルへのアクセスを fail-closed で止める hook 群の実装（TypeScript、460 件超の自動テスト）
 - 上記を複数案件へ配布・同期する仕組み（Laravel 一般 / 軽量 UseCase / WordPress の 3 層）
 - 事例（受託開発案件への AI コーディング導入）
-  - 課題：受託案件で AI コーディングを使うにあたり、生成コードの品質と、機密情報・他案件への越境を担保する仕組みがなかった。単発の指示では成果物の品質が安定せず、レビューが 3 巡以上かかることが常態化していた
+  - 課題：受託案件で AI コーディングを使うにあたり、生成コードの品質と、機密情報・他案件への越境を担保する仕組みがなかった。単発の指示では成果物の品質が安定せず、レビューも 3 巡以上かかっていた
   - 判断：注意力に頼らず構造で防ぐ。安全に関わる制御は自然言語の指示ではなく hook で fail-closed に止め、進め方はレーンとループで標準化し、レビューは 1 人が全観点を見る形をやめて観点ごとに分ける
   - 実装：要件の原文を保存し、原文にない決定は理由付きで履歴に残す仕組み。調査 → 設計 → 設計レビュー → 実装 → 実装レビュー → 改善のループ。ループ途中の放棄を検出して継続させる Stop hook。ユーザーレベルの fail-closed hook 群（一度検出したらセッションを凍結）
   - 結果：受託案件で運用中。同じループで Chrome 拡張 3 本を要件からストア公開まで実施
@@ -177,7 +177,7 @@
   - [Chrome ウェブストア](https://chromewebstore.google.com/detail/local-api-client/ihmoinkdbohnodnjpkdmenkmiikllfgp) / [GitHub](https://github.com/kojirock5260/local-api-client)
 - **jp-dummy-fill**：日本語の入力フォームに、バリデーションを通るダミーデータをワンクリックで入力する拡張。かな、分割された郵便番号・電話番号、都道府県セレクト、郵便番号自動補完との共存に対応し、離島など配送テスト用の住所切り替えも可能。データは郵便番号と町名以外すべて架空
   - [Chrome ウェブストア](https://chromewebstore.google.com/detail/jp-dummy-fill/likiphcnpamhfafnnehfhnjgbonaafpb) / [GitHub](https://github.com/kojirock5260/jp-dummy-fill)
-- 共通の設計：外部通信なし、権限は最小限（Snap Redact と jp-dummy-fill は activeTab / scripting / contextMenus のみ、Local API Client はホスト権限を localhost に限定）
+- 共通の設計：外部通信なし、権限は最小限。Snap Redact と jp-dummy-fill は activeTab / scripting / contextMenus のみ、Local API Client はホスト権限を localhost に限定
 - いずれも TypeScript / MIT でソースを公開。自作の開発ループ（要件 → 設計 → レビュー → 実装）で設計からストア公開まで実施
 
 ### 技術発信
