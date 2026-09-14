@@ -1,10 +1,10 @@
 # 職務経歴書
 
-**「やりたいこと」の整理から本番運用まで一気通貫のバックエンドエンジニア｜決済・認証の連携を複数案件で実装｜AI 駆動開発と AI 運用ルール設計**
+**「やりたいこと」の整理から本番運用まで一気通貫のバックエンドエンジニア｜決済・認証の連携を複数案件で実装｜AI コーディングを安全に使う開発体制の設計・運用**
 
 - エンジニア歴 18 年。少人数チームに入り、事業側と「やりたいこと」を話しながら要件に落とし、環境整備・実装・運用まで 1 人で回す
 - 決済・認証の連携を 6 案件で担当（PAY.JP / GMO / SBPS / 楽天ペイ / Amazon Pay / キャリア決済 / Cognito・KYC）。毎回異なるサービスを調べて実装まで持っていく
-- フィンテック案件で AI コーディングツールの安全運用ルールを設計・運用中
+- Claude Code を使った開発プロセス（レーン制のループ、観点別サブエージェントによる多視点レビュー、fail-closed の hook 群）を設計し、受託案件で運用中。AI で作ったコードを検証付きで納品する体制ごと提供できる
 
 | key | value |
 |---|---|
@@ -20,7 +20,7 @@
 - 事業側の「こうしたい」を、やる / やらないのスコープと受け入れ条件に落とし、そのまま実装まで持っていく
 - 初めて触る決済・認証サービスでも、仕様を読み込んで連携を実装・運用まで持っていく
 - テスト文化・CI/CD がないチームに PHPUnit / Playwright / GitHub Actions を導入し、定着させる
-- AI コーディングツールを機密情報のある環境で使うための、アクセス範囲・レビュー・テストのルールを設計する
+- AI コーディングを機密情報のある環境で使うための開発体制（レビューループ・ガードレール hook・進め方の標準化）を設計し、運用する
 - レガシーな PHP・フレームワークを、運用を止めずにバージョンアップ・リプレイスする
 
 ---
@@ -48,14 +48,6 @@
 - KYC（本人確認）フローの実装
 - Laravel-permission によるロールベースアクセス制御（RBAC）
 
-### AI 駆動開発と AI 運用ルール設計
-
-- 機密性の高いフィンテック案件で、AI コーディングツールのアクセス範囲をディレクトリ単位で制限し、生成コードはレビューとテストで担保する運用ルールを設計・運用
-- Claude Code で Chrome 拡張 2 本（Snap Redact / Local API Client）を設計から Chrome ウェブストア公開まで実施（TypeScript / MIT、2026 年 8 月）
-- Claude Code / Cursor を、設計の壁打ちから実装・リファクタリングまで日常的に活用
-
-<!-- LLM組み込み実績: 完成後にここへ追記 -->
-
 ### 設計・開発 / テスト・品質・CI/CD
 
 - Clean Architecture を意識したバックエンド設計
@@ -66,6 +58,18 @@
 - Docker でのローカル開発環境整備
 - レガシーコードのバージョンアップ・リプレイス（PHP 5.3 → 5.6、CakePHP → Laravel 5、Laravel 5.8 + Nuxt へのバージョンアップなど）
 
+
+### AI 駆動開発の体制構築
+
+- Claude Code を前提にした開発プロセスの設計（開発の重さで経路を変えるレーン制、要件 → 調査 → 設計 → 実装 → レビュー → 改善のループ）
+- 観点別サブエージェントによる多視点レビュー体制の設計（技術観点とペルソナ観点の分離、指摘への根拠と影響の必須化、2 巡で閉じる収束ルール）
+- 破壊・情報の持ち出し・パッケージ導入・案件越境・秘密ファイルへのアクセスを fail-closed で止める hook 群の実装（TypeScript、460 件超の自動テスト）
+- 上記を複数案件へ配布・同期する仕組み（Laravel 一般 / 軽量 UseCase / WordPress の 3 層）
+- 事例（受託開発案件への AI コーディング導入）
+  - 課題：受託案件で AI コーディングを使うにあたり、生成コードの品質と、機密情報・他案件への越境を担保する仕組みがなかった。単発の指示では成果物の品質が安定せず、レビューが 3 巡以上かかることが常態化していた
+  - 判断：注意力に頼らず構造で防ぐ。安全に関わる制御は自然言語の指示ではなく hook で fail-closed に止め、進め方はレーンとループで標準化し、レビューは 1 人が全観点を見る形をやめて観点ごとに分ける
+  - 実装：要件の原文を保存し、原文にない決定は理由付きで履歴に残す仕組み。調査 → 設計 → 設計レビュー → 実装 → 実装レビュー → 改善のループ。ループ途中の放棄を検出して継続させる Stop hook。ユーザーレベルの fail-closed hook 群（一度検出したらセッションを凍結）
+  - 結果：受託案件で運用中。同じループで Chrome 拡張 3 本を要件からストア公開まで実施
 ---
 
 ## 主要案件
@@ -73,9 +77,9 @@
 #### フィンテック系サービス新規開発（DF社） / 2023/06 〜 現在 / 週 5 / エンジニア 3 名
 
 - 課題：新規サービスのため認証・本人確認・権限の基盤が存在せず、事業側の要望も要件として固まっていない状態
-- 判断：事業側と対話しながら要求を具体化。認証基盤は自前実装せず Amazon Cognito を採用し、機密性の高いコードを扱うため AI ツールのアクセス範囲をディレクトリ単位で制限する運用ルールを先に設計
+- 判断：事業側と対話しながら要求を具体化。認証基盤は自前実装せず Amazon Cognito を採用
 - 実装：Amazon Cognito 認証基盤の 0 → 1 設計・実装、KYC ライブラリによる本人確認フロー、Laravel-permission によるロールベースアクセス制御
-- 結果：認証・本人確認・権限の基盤を稼働させ、Claude Code を制限付きで運用しながら開発を継続中
+- 結果：認証・本人確認・権限の基盤を稼働させ、開発を継続中
 - 技術：PHP 8.3 / Laravel 12 / MySQL 8 / Vue.js 3 / Inertia.js / Amazon Cognito
 
 #### 教育系サービス保守・運用（TK社） / 2026/01 〜 現在 / 週 2（夜間・土日） / エンジニア 6 名
@@ -158,22 +162,22 @@
 | AWS | EC2 / RDS / S3 / SQS / CloudFront / Lambda / Cognito |
 | テスト・品質 | PHPUnit / Jest / Playwright / PHPStan / PHP-CS-Fixer / Storybook |
 | CI/CD・環境 | GitHub Actions / CircleCI / Docker |
-| AI 開発ツール | Claude Code / Cursor |
-
-<!-- LLM API / ベクトル DB: LLM 組み込み実績ができたら技術スタックに追記 -->
+| AI 駆動開発 | Claude Code（hooks / サブエージェント / スキル設計）、Cursor |
 
 ---
 
 ## 業務外活動
 
-### 個人開発（Chrome 拡張、2026 年 8 月公開）
+### 個人開発（Chrome 拡張、2026 年 8 月〜公開）
 
 - **Snap Redact**：選んだ範囲に隠す・囲う・矢印のマークを付け、クリップボードや PNG へ出力する拡張。復元できるモザイク・ぼかしは採用せず、塗りつぶしのみ
   - [Chrome ウェブストア](https://chromewebstore.google.com/detail/snap-redact/nfbcdbkbgboollbanfadblakbihlkbpe) / [GitHub](https://github.com/kojirock5260/snap-redact)
 - **Local API Client**：Chrome のサイドパネルで動く localhost 専用の REST クライアント
   - [Chrome ウェブストア](https://chromewebstore.google.com/detail/local-api-client/ihmoinkdbohnodnjpkdmenkmiikllfgp) / [GitHub](https://github.com/kojirock5260/local-api-client)
-- 共通の設計：外部通信なし、権限は最小限（Snap Redact は activeTab / scripting / contextMenus のみ、Local API Client はホスト権限を localhost に限定）
-- どちらも TypeScript / MIT でソースを公開。Claude Code を使って設計・実装・ストア公開まで実施
+- **jp-dummy-fill**：日本語の入力フォームに、バリデーションを通るダミーデータをワンクリックで入力する拡張。かな、分割された郵便番号・電話番号、都道府県セレクト、郵便番号自動補完との共存に対応し、離島など配送テスト用の住所切り替えも可能。データは郵便番号と町名以外すべて架空
+  - [Chrome ウェブストア](https://chromewebstore.google.com/detail/jp-dummy-fill/likiphcnpamhfafnnehfhnjgbonaafpb) / [GitHub](https://github.com/kojirock5260/jp-dummy-fill)
+- 共通の設計：外部通信なし、権限は最小限（Snap Redact と jp-dummy-fill は activeTab / scripting / contextMenus のみ、Local API Client はホスト権限を localhost に限定）
+- いずれも TypeScript / MIT でソースを公開。自作の開発ループ（要件 → 設計 → レビュー → 実装）で設計からストア公開まで実施
 
 ### 技術発信
 
@@ -232,7 +236,7 @@
 - 稼働：週 3〜4（現在の案件を整理のうえ移行。開始時期は相談）
 - 勤務形態：フルリモート希望。出社も相談可
 - 稼働時間：平日日中を中心に稼働。MTG も日中で調整可能
-- 希望領域：決済・認証・フィンテック領域のバックエンド、生成 AI / LLM を業務システムに組み込む案件、AI 活用の運用ルール設計
+- 希望領域：決済・認証・フィンテック領域のバックエンド、AI コーディングを安全に使う開発体制の構築を含む開発案件、テスト・CI・レビュー文化の導入を伴う開発
 - 基本的に PC の前にいるため、レスポンスは早め
 
 <div class="web-only">
