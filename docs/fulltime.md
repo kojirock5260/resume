@@ -6,17 +6,11 @@
 - 決済・認証の連携を 6 案件で担当（PAY.JP / GMO / SBPS / 楽天ペイ / Amazon Pay / キャリア決済 / Cognito・KYC）。毎回異なるサービスを調べて実装まで持っていく
 - Claude Code を使った開発プロセス（レーン制のループ、観点別サブエージェントによる多視点レビュー、fail-closed の hook 群）を設計し、受託案件で運用中
 
-<!-- 氏名と居住地は PDF にだけ出す。Jekyll は if false の中を出力せず、scripts/build-pdf.js は Liquid タグだけ外して中身を残す -->
-<table>
-  <thead><tr><th>key</th><th>value</th></tr></thead>
-  <tbody>
-{%- if false -%}
-    <tr><td>氏名</td><td>kojirock5260</td></tr>
-{%- endif -%}
-    <tr><td>ブログ</td><td><a href="https://kojirooooocks.hatenablog.com/">https://kojirooooocks.hatenablog.com/</a></td></tr>
-    <tr><td>GitHub</td><td><a href="https://github.com/kojirock5260">https://github.com/kojirock5260</a></td></tr>
-  </tbody>
-</table>
+| key | value |
+|---|---|
+| アカウント | kojirock5260 |
+| ブログ | https://kojirooooocks.hatenablog.com/ |
+| GitHub | https://github.com/kojirock5260 |
 
 ---
 
