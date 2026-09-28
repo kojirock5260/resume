@@ -26,7 +26,10 @@ marked.setOptions({ gfm: true, ...(config.marked_options || {}) });
   try {
     const css = fs.readFileSync(path.resolve(config.stylesheet), config.stylesheet_encoding || 'utf-8');
     for (const md of files) {
-      const body = marked(fs.readFileSync(md, 'utf-8'));
+      // Jekyll 用の Liquid タグ（{%- if false -%} など）は外し、中身は残す。
+      // Web ページには出さず PDF にだけ出す内容（氏名・居住地）に使っている
+      const source = fs.readFileSync(md, 'utf-8').replace(/^[ \t]*\{%-?[\s\S]*?-?%\}[ \t]*\n/gm, '');
+      const body = marked(source);
       const html = `<!DOCTYPE html>
 <html><head><meta charset="utf-8"><title>${path.basename(md, '.md')}</title><style>${css}</style></head>
 <body class="${config.body_class || ''}">${body}</body></html>`;
