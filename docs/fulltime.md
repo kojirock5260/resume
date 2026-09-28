@@ -86,7 +86,7 @@
 #### 教育系サービス保守・運用（TK社） / 2026/01 〜 現在 / 週 2（夜間・土日） / エンジニア 6 名
 
 - 開発手法：アジャイル
-- AI ツール：Claude Code / Cursor
+- AI ツール：Claude Code / Cursor（社内の別プロジェクトごとに使い分け）
 - 課題：Unit テストがなく、バックエンドの設計方針もチームで揃っていない状態
 - 判断：保守・運用と並行して、テストの書き方と設計方針の提案・定着を担当範囲とする
 - 実装：Unit テストの導入、バックエンド側の設計思想の提案とチームへの定着
@@ -172,7 +172,7 @@
 | テスト・品質 | PHPUnit / Jest / Playwright / PHPStan / PHP-CS-Fixer / Storybook |
 | CI/CD・環境 | GitHub Actions / CircleCI / Docker |
 | 開発手法 | スクラム（2 案件）、アジャイル（4 案件） |
-| AI 駆動開発 | Claude Code（hooks / サブエージェント / スキル設計）、Cursor、GitHub Copilot（PR の自動レビュー） |
+| AI 駆動開発 | Claude Code（hooks / サブエージェント / スキル設計）、Codex、Cursor、GitHub Copilot（PR の自動レビュー） |
 
 ---
 
@@ -188,6 +188,7 @@
   - [Chrome ウェブストア](https://chromewebstore.google.com/detail/jp-dummy-fill/likiphcnpamhfafnnehfhnjgbonaafpb) / [GitHub](https://github.com/kojirock5260/jp-dummy-fill)
 - 共通の設計：外部通信なし、権限は最小限。Snap Redact と jp-dummy-fill は activeTab / scripting / contextMenus のみ、Local API Client はホスト権限を localhost に限定
 - いずれも TypeScript / MIT でソースを公開。自作の開発ループ（要件 → 設計 → レビュー → 実装）で設計からストア公開まで実施
+- AI ツール：Claude Code と Codex で仕様の作成・レビュー、Codex で実装
 
 ### 技術発信
 
